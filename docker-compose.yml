@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  db:
+    image: "postgres:${POSTGRES_VERSION}"
+    restart: always
+    expose:
+      - 5432
+    environment:
+      - POSTGRES_PASSWORD
+  test:
+    image: "node:${NODE_VERSION}"
+    links:
+    - db
+    environment:
+      - PGHOST
+      - PGPASSWORD
+      - PGUSER
+    working_dir: /app
+    volumes:
+    - .:/app
+    command: bash -c "
+      npm rebuild --silent &&
+      npm test "

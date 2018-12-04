@@ -12,6 +12,19 @@ ___note___: this depends on _either_ `npm install pg` or `npm install pg.js`, bu
 
 ### :star: [Documentation](https://node-postgres.com/api/cursor) :star:
 
+### Testing
+
+To run the test suite against all supported versions of PostgreSQL and
+Node.js locally, you will need to install and run Docker, and then run
+
+    ./test_all_versions.sh
+
+This will take a while, and consume a lot of bandwidth downloading Docker
+images.
+
+Due to a [bug in npm][npmbug], the output is very verbose, but with a bit of
+scrolling, you should hopefully see green checkmarks for every test run.
+
 ### license
 
 The MIT License (MIT)
