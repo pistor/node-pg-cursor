@@ -25,6 +25,8 @@ images.
 Due to a [bug in npm][npmbug], the output is very verbose, but with a bit of
 scrolling, you should hopefully see green checkmarks for every test run.
 
+[npmbug]: https://npm.community/t/npm-rebuild-silent-is-not-silent/3834
+
 ### license
 
 The MIT License (MIT)
